@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function tree() {
+            const a = 10;
+            let resultt = "";
+            let pip="||";
+            let score="";
+            let x="";
+
+            for (let i = 1; i <= a; i++) {
+                let r = "";
+                for (let j = 0; j < 2 * i - 1; j++) {
+                    r += "*";
+                }
+                resultt += r + "<br>";
+            
+
+            }
+            for(let i=0;i<a*2;i++){
+                x+="_";
+
+            
+            }
+
+            document.getElementById('result').innerHTML = resultt;
+            document.getElementById('PIPE1').innerHTML = pip;
+            document.getElementById('PIPE2').innerHTML = pip;
+            document.getElementById('underscore').innerHTML = x;
+
+
+        }
+
+        window.onload = tree;
+    </script>
+    <div style="text-align: center;">
+        <div id="result"></div>
+        <div id="underscore"></div>
+        <div  id="PIPE1"></div>
+        <div id="PIPE2"> </div>
+
+    </div>
+</body>
+</html>
